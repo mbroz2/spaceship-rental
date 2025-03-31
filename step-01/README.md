@@ -1,4 +1,4 @@
-# spaceship-rental
+# spaceship-rental-01
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -49,14 +49,11 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ./mvnw package -Dnative -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./target/spaceship-rental-1.0.0-SNAPSHOT-runner`
+You can then execute your native executable with: `./target/spaceship-rental-01-1.0.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
 
-## Provided Code
+## Related Guides
 
-### REST
-
-Easily start your REST Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+- LangChain4j Ollama ([guide](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html)): Provides the basic integration of Ollama with LangChain4j
+- WebSockets Next ([guide](https://quarkus.io/guides/websockets-next-reference)): Implementation of the WebSocket API with enhanced efficiency and usability
