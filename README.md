@@ -1,8 +1,18 @@
 # spaceship-rental
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Learn how to add AI to your Java apps.
+Each of the step-xx directories introduces a new AI app concept, and each is a complete app you can run.
+
+All apps in this repo use Quarkus and LangChain4J.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+
+The following details apply to all of the step-xx directories.
+
+## Prerequisites
+The demos use Large Language Models (LLMs).  The default configuration expects [Ollama](https://ollama.com/download) to be running on your system.  Alternatively, you can update the demo's `/src/resources/application.properties` to set a different provider.
+
+To compile and run any of the demos, Java SE JDK 21 or later is required.
 
 ## Running the application in dev mode
 
@@ -52,11 +62,3 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 You can then execute your native executable with: `./target/spaceship-rental-1.0.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
-
-## Provided Code
-
-### REST
-
-Easily start your REST Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
