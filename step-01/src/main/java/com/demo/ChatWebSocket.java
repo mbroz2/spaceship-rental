@@ -4,12 +4,12 @@ import io.quarkus.websockets.next.OnOpen;
 import io.quarkus.websockets.next.OnTextMessage;
 import io.quarkus.websockets.next.WebSocket;
 
-@WebSocket(path = "/customer-support-agent")
-public class CustomerSupportAgentWebSocket {
+@WebSocket(path = "/chat/batch")
+public class ChatWebSocket {
 
     private final CustomerSupportAgent customerSupportAgent;
 
-    public CustomerSupportAgentWebSocket(CustomerSupportAgent customerSupportAgent) {
+    public ChatWebSocket(CustomerSupportAgent customerSupportAgent) {
         this.customerSupportAgent = customerSupportAgent;
     }
 
