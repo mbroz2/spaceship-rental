@@ -10,40 +10,32 @@ import '@vaadin/grid';
 import '@vaadin/grid/vaadin-grid-sort-column.js';
 
 export class DemoTitle extends LitElement {
+  
+  static styles = css`
+  h2 {
+    font-family: "Red Hat Mono", monospace;
+    font-size: 60px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    color: var(--main-highlight-text-color);
+  }
 
-    static styles = css`
-      h2 {
-        font-family: "Red Hat Mono", monospace;
-        font-size: 60px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 26.4px;
-        color: var(--main-highlight-text-color);
-      }
-
-      .title {
-        text-align: center;
-        padding: 1em;
-        background: var(--main-bg-color);
-      }
-      
-      .explanation {
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        text-align: justify;
-        font-size: 20px;
-      }
-      
-      .explanation img {
-        max-width: 60%;
-        display: block;
-        float:left;
-        margin-right: 2em;
-        margin-top: 1em;
-      }
-    `
+  .title {
+    text-align: center;
+    padding: 1em;
+    background: var(--main-bg-color);
+  }
+  
+  .explanation {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: justify;
+    font-size: 20px;
+  }
+`
 
     render() {
         return html`
@@ -51,9 +43,9 @@ export class DemoTitle extends LitElement {
                 <h2>Rocket's Cosmic Cruisers</h2>
             </div>
             <div class="explanation">
-                <p>Welcome to Rocket's Cosmic Cruisers!</p>
-                <p>Please click the button on the bottom right to start the conversation 
-                with an LLM-powered customer support agent.</p>
+              <p>Welcome to Rocket's Cosmic Cruisers!</p>
+              <p>Please click the button on the bottom right to start the conversation 
+              with an LLM-powered customer support agent.</p>
             </div>
         `
     }

@@ -52,11 +52,6 @@
             <version>1.0.8</version>
         </dependency>
         <dependency>
-            <groupId>org.mvnpm.at.vaadin</groupId>
-            <artifactId>button</artifactId>
-            <version>24.7.2</version>
-        </dependency>
-        <dependency>
             <groupId>org.mvnpm.at.mvnpm</groupId>
             <artifactId>vaadin-webcomponents</artifactId>
             <scope>runtime</scope>
