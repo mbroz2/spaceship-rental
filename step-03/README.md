@@ -10,7 +10,7 @@ This application builds on step-02 by adding retrieval augmented generation (RAG
   - What's a good planet to visit if I want to see volcanoes?
   - Where should I go if I want to be able to see the earth rise/set?
   - What's a good place to go to get out of the cold?
-4. Experiment with RAG by asking questions related to the terms of use document:
+4. Experiment with RAG by asking questions related to the "Terms of Use" document:
   - Can I get a refund if I cancel my booking 9 days in advance?
   - I locked my keys in the spaceship.
   - I'm in your piece of junk spaceship orbiting Neptune and it stopped working.
