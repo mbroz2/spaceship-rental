@@ -12,8 +12,8 @@ This application builds on step-02 by adding retrieval augmented generation (RAG
   - What's a good place to go to get out of the cold?
 4. Experiment with RAG by asking questions related to the "Terms of Use" document:
   - Can I get a refund if I cancel my booking 9 days in advance?
-  - I locked my keys in the spaceship.
-  - I'm in your piece of junk spaceship orbiting Neptune and it stopped working.
+  - I locked my keys in the spaceship
+  - I'm on Neptune and my spaceship broke down
 
 ## Related Guides
 
