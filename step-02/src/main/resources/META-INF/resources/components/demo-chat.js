@@ -24,12 +24,6 @@ export class DemoChat extends LitElement {
         const protocol = (window.location.protocol === 'https:') ? 'wss' : 'ws';
         let processing = 'batch'
         let socket = new WebSocket(protocol + '://' + window.location.host + '/chat/' + processing);
-        let socketStreaming = new WebSocket(protocol + '://' + window.location.host + '/chat/' + 'stream');
-
-        const streamingToogle = document.getElementById('streamingToggle');
-        streamingToogle.addEventListener('change', function() {
-            processing = streamingToogle.checked ? 'stream' : 'batch';
-          });
 
         const that = this;
 
@@ -63,20 +57,32 @@ export class DemoChat extends LitElement {
             }
         }
         socket.onmessage = onMessage;
-        socketStreaming.onmessage = onMessage;
         
 
         chatBot.addEventListener("sent", function (e) {
             if (e.detail.message.sender.name !== "Bot") {
-                // User message
                 const msg = that._stripHtml(e.detail.message.message);
-                processing === "batch" ? socket.send(msg) : socketStreaming.send(msg);
+                socket.send(msg);
                 chatBot.sendMessage("", {
                     right: false,
                     loading: true
                 });
             }
         });
+
+        const streamingToggle = document.getElementById('streamingToggle');
+        streamingToggle.addEventListener('change', function() {
+            // Clear chat and close socket
+            let chatBody = chatBot.shadowRoot.querySelector('.chatbot-body');
+            chatBody.innerHTML = '';
+            chatBot.messages.length = 0;
+            socket.close();
+            
+            // Initiate new WebSocket connection
+            processing = streamingToggle.checked ? 'stream' : 'batch';
+            socket = new WebSocket(protocol + '://' + window.location.host + '/chat/' + processing);
+            socket.onmessage = onMessage;
+          });
     }
 
 
