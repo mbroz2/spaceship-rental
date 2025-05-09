@@ -70,8 +70,8 @@ export class DemoChat extends LitElement {
             }
         });
 
-        const streamingToogle = document.getElementById('streamingToggle');
-        streamingToogle.addEventListener('change', function() {
+        const streamingToggle = document.getElementById('streamingToggle');
+        streamingToggle.addEventListener('change', function() {
             // Clear chat and close socket
             let chatBody = chatBot.shadowRoot.querySelector('.chatbot-body');
             chatBody.innerHTML = '';
@@ -79,7 +79,7 @@ export class DemoChat extends LitElement {
             socket.close();
             
             // Initiate new WebSocket connection
-            processing = streamingToogle.checked ? 'stream' : 'batch';
+            processing = streamingToggle.checked ? 'stream' : 'batch';
             socket = new WebSocket(protocol + '://' + window.location.host + '/chat/' + processing);
             socket.onmessage = onMessage;
           });
