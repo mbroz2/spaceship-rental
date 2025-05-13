@@ -37,14 +37,14 @@ public interface CustomerSupportAgent {
     @UserMessage("""
         Given the users query regarding available spaceships for a trip {{message}}, provide a well-formed, clear and concise response listing the available spaceships.
         Only use the fleet data from {{compatibleSpaceships}} for your response, and list all the ship options.
-        Do not include any Terms of Use unless relavent to the user's query.
+        Do not include any Terms of Use unless relevent to the user's query.
         """)
     String suggestSpaceships(String message, List<Spaceship> compatibleSpaceships);
 
     @UserMessage("""
         Given the users query regarding available spaceships for a trip {{message}}, provide a well-formed, clear and concise response listing the available spaceships.
         Only use the fleet data from {{compatibleSpaceships}} for your response, and list all the ship options.
-        Do not include any Terms of Use unless relavent to the user's query.
+        Do not include any Terms of Use unless relevent to the user's query.
         """)
     Multi<String> streamSuggestSpaceships(String message, List<Spaceship> compatibleSpaceships);
 }

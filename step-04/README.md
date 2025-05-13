@@ -14,10 +14,10 @@ This application builds on step-03 with an example of using structured outputs f
   - Can I get a refund if I cancel my booking 9 days in advance?
   - I locked my keys in the spaceship
   - I'm on Neptune and my spaceship broke down
-5. Utlize structured outputs to determine compatible spaceships by asking questions such as:
-  -  Which spaceship can fit 6 passengers and travel to Pluto?
-  -  Which spaceship has room for cargo and can travel to Mars and Saturn?
-  -  Which spaceship can travel outside of our solar system with 3 passangers?
+5. Utilize structured outputs to help the LLM choose the best spaceships for a journey:
+  -  I'd like to go visit Venus with my best friend, what spaceships are available for that?
+  -  Which spaceship can travel outside of our solar system with 3 passengers?
+  -  I want to travel to Saturn with 5 friends to collect rocks and ice from the rings and bring them back. Which of your spaceships is best for that?
 
 ## Related Guides
 
