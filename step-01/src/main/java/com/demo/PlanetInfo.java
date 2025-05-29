@@ -1,6 +1,6 @@
 package com.demo;
 
-public interface PlanetInfo {
+public final class PlanetInfo {
     static final String PLANET_FACT_SHEET =
         """
         # Fact Sheet
