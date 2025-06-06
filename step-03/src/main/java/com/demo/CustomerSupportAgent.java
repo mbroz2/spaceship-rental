@@ -23,6 +23,8 @@ public interface CustomerSupportAgent {
 
     Multi<String> streamChat(String userMessage);
 
+    SpaceshipQuery extractSpaceshipAttributes(String userMessage);
+
     @SystemMessage(
         """
         You are a friendly, but terse customer service agent for Rocket's Cosmic Cruisers, a spaceship rental shop. 
@@ -30,16 +32,14 @@ public interface CustomerSupportAgent {
         """)
     boolean isSpaceshipQuery(String userMessage);
 
-    SpaceshipQuery extractSpaceshipAttributes(String userMessage);
-
     @UserMessage("""
-        Given the users query regarding available spaceships for a trip {{message}}, provide a well-formed, clear and concise response listing our applicable spaceships.
+        Given the user's query regarding available spaceships for a trip {{message}}, provide a well-formed, clear and concise response listing our applicable spaceships.
         Only use the spaceship fleet data from {{compatibleSpaceships}} for your response.
         """)
     String suggestSpaceships(String message, List<Spaceship> compatibleSpaceships);
 
     @UserMessage("""
-        Given the users query regarding available spaceships for a trip {{message}}, provide a well-formed, clear and concise response listing our applicable spaceships.
+        Given the user's query regarding available spaceships for a trip {{message}}, provide a well-formed, clear and concise response listing our applicable spaceships.
         Only use the spaceship fleet data from {{compatibleSpaceships}} for your response.
         """)
     Multi<String> streamSuggestSpaceships(String message, List<Spaceship> compatibleSpaceships);
