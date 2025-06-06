@@ -40,14 +40,10 @@
             <version>0.25.0</version>
         </dependency>
         <dependency>
-            <groupId>io.quarkiverse.langchain4j</groupId>
-            <artifactId>quarkus-langchain4j-easy-rag</artifactId>
-            <version>0.25.0</version>
-        </dependency>
-        <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-websockets-next</artifactId>
         </dependency>
+
 
         <!-- UI -->
         <dependency>
