@@ -3,7 +3,7 @@
 Learn how to add AI to your Java apps.
 Each of the step-xx directories introduces a new AI app concept, and each is a complete app you can run.
 
-All apps in this repo use Quarkus and LangChain4J.
+All apps in this repo use Quarkus and LangChain4j.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
