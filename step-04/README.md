@@ -14,7 +14,10 @@ This application builds on step-03 with an example of using LLM input and output
   -  I'd like to go visit Venus with my best friend, what spaceships are available for that?
   -  I want to travel to Saturn with 5 friends to collect rocks and ice from the rings and bring them back. Which of your spaceships is best for that?
   -  Which spaceship can travel outside of our solar system with 3 passengers?
-5.   
+5. Exercise the input and output guardrails:
+  -  Input Guardrail (Restrict length): Enter any string longer than 2000 charaters
+  -  Output Guardrail (Restrict length): Enter the following in the chat and then check the logs: "Provide a detailed description of each possible destination"
+  -  Output Guardrail (Prohibited Terms): Enter the following in the chat and then check the logs: "Hi, my name is aaa" 
 
 ## Related Guides
 
