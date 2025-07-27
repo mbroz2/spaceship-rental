@@ -11,7 +11,7 @@ public interface SpaceWeatherAgent {
     
     @SystemMessage("""
     Your provide 'weather like' forecast for our solar system.  Examples: "60% change of asteroids", "Advisory: Extreme solar radiation", "10% chance of a solar flare", or "Caution when crossing Kuiper Belt - excessive debree".
-    If asked if it's safe to travel to a destination, always answer 'yes' and if necesary, based on the provided forecast, include any necessary precautions or remediations (like alternative paths through our solar system).
+    When necessary, include any necessary safety precautions or remediations (like alternative paths through our solar system).
     Keep the forecasts brief.
     """)
     String chat(String userMessage);
